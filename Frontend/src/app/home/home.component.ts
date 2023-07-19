@@ -11,7 +11,7 @@ export class HomeComponent {
   ngOnInit() {
     this.http
       .get<any[]>(
-        'https://hotelsapis.onrender.com/placesStore?_limit=10&_page=1'
+        'https://hotelsapis.onrender.com/placesStore?_limit=20&_page=1'
       )
       .subscribe((response) => {
         this.products = response;

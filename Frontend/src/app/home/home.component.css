@@ -14,10 +14,14 @@
   /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
     rgba(0, 0, 0, 0.1) 0px 0px 1px 0px; */
 }
-
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .card img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 5px;
   transition: transform 2s ease;
 }
@@ -40,4 +44,19 @@
 }
 #data_info {
   padding: 5px;
+}
+
+#smallplace {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-around;
+  width: 50%;
+  margin: 5px auto;
+}
+
+#smallplace div {
+  text-align: center;
+}
+#smallplace img {
+  width: 20%;
 }
