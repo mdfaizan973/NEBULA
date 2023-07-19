@@ -2,10 +2,17 @@ from flask import Flask
 from pymongo import MongoClient
 from flask import Flask, request
 from flask import jsonify
+from flask_cors import CORS
 
 from bson.objectid import ObjectId
-      
+
 app = Flask(__name__)
+CORS(app)
+
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/host/*": {"origins": "*"}})
+
+
 client = MongoClient("mongodb+srv://faizanmd:faizan123@cluster0.defifv6.mongodb.net/nebuladb?retryWrites=true&w=majority")
 db = client["nebuladb"]
 
@@ -74,7 +81,7 @@ def get_hosts():
         hosts.append(host)
     return jsonify(hosts)
     
-#-----------------------------------------------------------------
+#---------------------------DELETE DATA--------------------------------------
 
 @app.route("/delete-host/<host_id>", methods=["DELETE"])
 def delete_host(host_id):
@@ -86,7 +93,26 @@ def delete_host(host_id):
         return jsonify({"error": "Host not found"}), 404
 
 
-#-----------------------------------------------------------------
+#--------------------------UPDATE DATA---------------------------------------
+
+# @app.route("/update-host/<host_id>", methods=["PUT"])
+# def update_host(host_id):
+#     host_collection = db["host"]
+#     host_data = request.get_json()
+#     updated_host = {
+#         "name": host_data.get("name"),
+#         "status": host_data.get("status"),
+#         "location": host_data.get("location"),
+#         "propertyType": host_data.get("propertyType"),
+#         "about": host_data.get("about"),
+#         "hostingTime": host_data.get("hostingTime")
+#     }
+#     result = host_collection.update_one({"_id": ObjectId(host_id)}, {"$set": updated_host})
+#     if result.modified_count == 1:
+#         return jsonify({"message": "Host updated successfully"})
+#     else:
+#         return jsonify({"error": "Host not found"}), 404
+
 #-----------------------------------------------------------------
 if __name__ == "__main__":
     app.run()
