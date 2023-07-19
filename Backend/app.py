@@ -76,7 +76,7 @@ def get_hosts():
     
 #-----------------------------------------------------------------
 
-@app.route("/hosts/<host_id>", methods=["DELETE"])
+@app.route("/delete-host/<host_id>", methods=["DELETE"])
 def delete_host(host_id):
     hosts_collection = db["host"]
     result = hosts_collection.delete_one({"_id": ObjectId(host_id)})
