@@ -1,5 +1,5 @@
 .navbar .navbar-nav .nav-link {
-  color: #ffffff;
+  color: #000000;
 }
 .sm-icons {
   flex-direction: row;
@@ -19,9 +19,31 @@
   content: "";
   background-color: black;
   width: 0%;
-  height: 4px;
+  height: 2px;
   transition: all 0.5s;
 }
 .navbar .navbar-nav .nav-item:hover::after {
   width: 100%;
+}
+.logo {
+  color: rgb(0, 0, 0) !important;
+}
+
+.cus_main_link {
+  /* border: 2px solid grey; */
+  border-radius: 40px;
+  margin-left: 2px;
+  width: 20%;
+  justify-content: space-around;
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* .cus_icon,
+.cus_soc {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 50%;
+} */
+
+.cus_navr {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
