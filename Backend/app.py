@@ -15,11 +15,6 @@ def home():
 #-----------------------------------------------------------------
 
 #-----------------------------POST DATA------------------------------------
-
-@app.route("/")
-def home():
-    return "Welcome to Python Projects"
-
 @app.route("/host", methods=["POST"])
 def create_host():
     class Host:
@@ -58,46 +53,40 @@ def create_host():
 
     return "Host created successfully!"
 
-
-
 #---------------------------GET DATA--------------------------------------
-# @app.route("/hosts", methods=["GET"])
-# def get_hosts():
-#     host_collection = db["host"]
-#     hosts = []
-#     for host_data in host_collection.find():
-#         host = {
-#             "id": str(host_data["_id"]),
-#             "name": host_data["name"],
-#             "status": host_data["status"],
-#             "location": host_data["location"],
-#             "propertyType": host_data["propertyType"],
-#             "about": host_data["about"],
-#             "hostingTime": host_data["hostingTime"],
-#         }
-#         hosts.append(host)
-#     return jsonify(hosts)
 
 
-# @app.route("/host", methods=["GET"])
-# def get_hosts():
-#     hosts_collection = db["host"]
-#     hosts = []
-#     for host_data in hosts_collection.find():
-#         host = {
-#             "id": str(host_data["_id"]),
-#             "name": host_data["name"],
-#             "status": host_data["status"],
-#             "location": host_data["location"],
-#             "propertyType": host_data["propertyType"],
-#             "about": host_data["about"],
-#             "hostingTime": host_data["hostingTime"],
-#         }
-#         hosts.append(host)
-#     return jsonify(hosts)
+# ----------------Getinng Error While making GET request-------------------------
+@app.route("/hosts", methods=["GET"])
+def get_hosts():
+    hosts_collection = db["host"]
+    hosts = []
+    for host_data in hosts_collection.find():
+        host = {
+            "id": str(host_data["_id"]),
+            "name": host_data["name"],
+            "status": host_data["status"],
+            "location": host_data["location"],
+            "propertyType": host_data["propertyType"],
+            "about": host_data["about"],
+            "hostingTime": host_data["hostingTime"]
+        }
+        hosts.append(host)
+    return jsonify(hosts)
+    
+#-----------------------------------------------------------------
+
+@app.route("/hosts/<host_id>", methods=["DELETE"])
+def delete_host(host_id):
+    hosts_collection = db["host"]
+    result = hosts_collection.delete_one({"_id": ObjectId(host_id)})
+    if result.deleted_count == 1:
+        return jsonify({"message": "Host deleted successfully"})
+    else:
+        return jsonify({"error": "Host not found"}), 404
 
 
-
+#-----------------------------------------------------------------
 #-----------------------------------------------------------------
 if __name__ == "__main__":
     app.run()
