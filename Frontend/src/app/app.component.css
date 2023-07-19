@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(239, 239, 239, 0.603);
+  padding: 1rem 1.15rem;
+}
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-toggler {
+  cursor: pointer;
+  border: none;
+  display: none;
+  outline: none;
+}
+
+.navbar-toggler span {
+  height: 2px;
+  width: 22px;
+  background-color: #3c4250;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.navbar-nav {
+  display: flex;
+  margin-left: auto;
+  padding-left: 0;
+  list-style: none;
+}
+
+.navbar-nav li a {
+  color: #3c4250;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav li a:hover {
+  color: #66f;
+}
+
+.navbar-dropdown .dropdown {
+  list-style: none;
+  position: absolute;
+  top: 150%;
+  left: 0;
+  background-color: #fff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
