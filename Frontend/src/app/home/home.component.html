@@ -1,0 +1,14 @@
+<!-- Mini Nav----  -->
+
+<!-- Data of hotel  -->
+
+<div id="main_container" *ngIf="products.length > 0">
+  <div class="card" *ngFor="let product of products">
+    <img [src]="product.homeMainPic" alt="Product Image" />
+    <div id="data_info">
+      <h3 class="title">{{ product.name }}</h3>
+      <h4 class="title">{{ product.location }}</h4>
+      <p class="price">$ {{ product.price }}</p>
+    </div>
+  </div>
+</div>
