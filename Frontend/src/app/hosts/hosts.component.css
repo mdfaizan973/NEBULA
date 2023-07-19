@@ -1,0 +1,14 @@
+.container {
+  width: 40%;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+#date_type {
+  display: flex;
+  justify-content: space-between;
+}
+#date_type div {
+  width: 50%;
+}

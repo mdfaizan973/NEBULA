@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/flowbite/css/flowbite.css",
               "src/styles.css"
             ],
             "scripts": []

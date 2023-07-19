@@ -11,8 +11,6 @@
   border-radius: 5px;
   border: none !important;
   padding: 3px;
-  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
-    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px; */
 }
 .stars {
   display: flex;
@@ -30,6 +28,7 @@
 }
 .card .title {
   font-size: 20px;
+  color: #2d2d2d;
   margin-top: 10px;
 }
 
@@ -56,7 +55,11 @@
 
 #smallplace div {
   text-align: center;
+  cursor: pointer;
 }
 #smallplace img {
   width: 20%;
+}
+#parent_small {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 3px;
 }
