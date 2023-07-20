@@ -1,55 +1,10 @@
-<!-- Mini Nav----  -->
-
-<div id="parent_small">
-  <div id="smallplace">
-    <div>
-      <img
-        src="https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg"
-        alt=""
-      />
-      <p>Hello</p>
-    </div>
-
-    <!-- ----------------------- -->
-    <div>
-      <img
-        src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
-        alt=""
-      />
-      <p>Hello</p>
-    </div>
-    <!-- ----------------------- -->
-    <div>
-      <img
-        src="https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg"
-        alt=""
-      />
-      <p>Hello</p>
-    </div>
-    <!-- ----------------------- -->
-    <div>
-      <img
-        src="https://a0.muscache.com/pictures/6ad4bd95-f086-437d-97e3-14d12155ddfe.jpg"
-        alt=""
-      />
-      <p>Hello</p>
-    </div>
-    <!-- ----------------------- -->
-    <div>
-      <img
-        src="https://a0.muscache.com/pictures/35919456-df89-4024-ad50-5fcb7a472df9.jpg"
-        alt=""
-      />
-      <p>Hello</p>
-    </div>
-  </div>
-</div>
-
 <!-- Data of hotel  -->
 
 <div id="main_container" *ngIf="products.length > 0">
   <div class="card" *ngFor="let product of products">
-    <img [src]="product.homeMainPic" alt="Product Image" />
+    <a [routerLink]="['/home', product.id]">
+      <img [src]="product.homeMainPic" alt="Product Image" />
+    </a>
     <div id="data_info">
       <div class="stars">
         <h3 class="title">{{ product.name }}</h3>
@@ -60,3 +15,11 @@
     </div>
   </div>
 </div>
+
+<div id="pagination_btn">
+  <button type="button" (click)="prev()" class="btn btn-secondary">Prev</button>
+  <button type="button" class="btn btn-dark rounded-circle">{{ page }}</button>
+  <button type="button" (click)="next()" class="btn btn-secondary">Next</button>
+</div>
+
+<app-footer></app-footer>

@@ -25,20 +25,43 @@
 .navbar .navbar-nav .nav-item:hover::after {
   width: 100%;
 }
-.logo {
-  color: rgb(0, 0, 0) !important;
-  cursor: pointer;
-  font-weight: 800;
-}
 
+.logo {
+  cursor: pointer;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: #007bff;
+  letter-spacing: 4px;
+}
 .cus_main_link {
   border-radius: 40px;
   margin-left: 2px;
-  width: 25%;
+  width: 30%;
   justify-content: space-around;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .cus_navr {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 3px;
+}
+#smallplace {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-around;
+  width: 50%;
+  margin: 5px auto;
+}
+
+#smallplace div {
+  text-align: center;
+  cursor: pointer;
+}
+#smallplace img {
+  width: 20%;
+}
+#parent_small {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 3px;
+  margin-top: 95px;
 }
