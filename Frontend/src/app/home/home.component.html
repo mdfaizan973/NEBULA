@@ -60,3 +60,11 @@
     </div>
   </div>
 </div>
+
+<div id="pagination_btn">
+  <button type="button" (click)="prev()" class="btn btn-secondary">Prev</button>
+  <button type="button" class="btn btn-dark rounded-circle">{{ page }}</button>
+  <button type="button" (click)="next()" class="btn btn-secondary">Next</button>
+</div>
+
+<app-footer></app-footer>

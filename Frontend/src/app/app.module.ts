@@ -8,9 +8,11 @@ import { HomeComponent } from './home/home.component';
 import { HostsComponent } from './hosts/hosts.component';
 import { FormsModule } from '@angular/forms';
 import { LandingComponent } from './landing/landing.component';
+import { FooterComponent } from './footer/footer.component';
+import { SnglepageComponent } from './snglepage/snglepage.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, HostsComponent, LandingComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, HostsComponent, LandingComponent, FooterComponent, SnglepageComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

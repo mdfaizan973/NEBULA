@@ -1,0 +1,34 @@
+.custom_cont img {
+  border-radius: 25px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.image-text {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.section-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.section-description {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .image-text {
+    font-size: 14px;
+  }
+
+  .section-heading {
+    font-size: 20px;
+  }
+
+  .section-description {
+    font-size: 14px;
+  }
+}

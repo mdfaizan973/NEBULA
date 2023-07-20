@@ -63,4 +63,11 @@
 }
 #parent_small {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 3px;
+  margin-top: 95px;
+}
+#pagination_btn {
+  display: flex;
+  width: 12%;
+  justify-content: space-around;
+  margin: auto;
 }
