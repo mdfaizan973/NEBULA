@@ -1,17 +1,13 @@
 <div class="container custom_cont">
   <div class="row">
     <div class="col-md-8">
-      <img
-        src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-582429514905613059/original/cf4304bf-4b85-4afb-9a11-19102077869d.jpeg?im_w=720"
-        class="img-fluid"
-        alt="Big Image"
-      />
+      <img [src]="dataItem.homeMainPic" class="img-fluid" alt="Big Image" />
     </div>
     <div class="col-md-4">
       <div class="row">
         <div class="col-md-12">
           <img
-            src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-582429514905613059/original/f41e7902-5b9a-4f75-8d87-fa8724b3cd3e.jpeg?im_w=720"
+            [src]="dataItem.carouselPic1"
             class="img-fluid"
             alt="Small Image 1"
           />
@@ -19,7 +15,7 @@
         <p></p>
         <div class="col-md-12">
           <img
-            src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-582429514905613059/original/dd4c0dcc-d550-4db2-8611-88ea69a4d979.jpeg?im_w=720"
+            [src]="dataItem.carouselPic2"
             class="img-fluid"
             alt="Small Image 2"
           />
@@ -29,7 +25,7 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <h2 class="section-heading">Section Title</h2>
+      <h2 class="section-heading">{{ dataItem.name }}</h2>
       <p class="section-description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
         consequat arcu eget orci aliquet, at elementum ex scelerisque.

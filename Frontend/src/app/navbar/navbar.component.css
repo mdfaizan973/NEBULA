@@ -46,3 +46,22 @@
 .cus_navr {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 3px;
 }
+#smallplace {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-around;
+  width: 50%;
+  margin: 5px auto;
+}
+
+#smallplace div {
+  text-align: center;
+  cursor: pointer;
+}
+#smallplace img {
+  width: 20%;
+}
+#parent_small {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 3px;
+  margin-top: 95px;
+}
