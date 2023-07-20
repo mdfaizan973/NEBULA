@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { initFlowbite } from 'flowbite';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,7 +6,4 @@ import { initFlowbite } from 'flowbite';
 })
 export class AppComponent {
   title = 'Frontend';
-  ngOnInit(): void {
-    initFlowbite();
-  }
 }
