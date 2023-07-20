@@ -25,12 +25,16 @@
 .navbar .navbar-nav .nav-item:hover::after {
   width: 100%;
 }
-.logo {
-  color: rgb(0, 0, 0) !important;
-  cursor: pointer;
-  font-weight: 800;
-}
 
+.logo {
+  cursor: pointer;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: #007bff;
+  letter-spacing: 4px;
+}
 .cus_main_link {
   border-radius: 40px;
   margin-left: 2px;

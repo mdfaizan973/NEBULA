@@ -10,6 +10,7 @@
   width: 300px;
   border-radius: 5px;
   border: none !important;
+  overflow: hidden;
   padding: 3px;
 }
 .stars {
