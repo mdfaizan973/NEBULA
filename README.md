@@ -2,9 +2,9 @@
 
 DESCRIPTION:-
 
-FRONTEND:- ` ng serve`
+To Run The FRONTEND:- ` ng serve`
 
-BACKEND:- `python app.py`
+To Run The BACKEND:- `python app.py`
 
 FE-Tech Stack:- `Angular`, `HTML`, `CSS`, `Bootstrap`
 
