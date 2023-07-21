@@ -10,9 +10,10 @@ import { FormsModule } from '@angular/forms';
 import { LandingComponent } from './landing/landing.component';
 import { FooterComponent } from './footer/footer.component';
 import { SnglepageComponent } from './snglepage/snglepage.component';
+import { PropertyComponent } from './property/property.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, HostsComponent, LandingComponent, FooterComponent, SnglepageComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, HostsComponent, LandingComponent, FooterComponent, SnglepageComponent, PropertyComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
