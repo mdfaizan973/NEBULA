@@ -11,9 +11,10 @@ import { LandingComponent } from './landing/landing.component';
 import { FooterComponent } from './footer/footer.component';
 import { SnglepageComponent } from './snglepage/snglepage.component';
 import { PropertyComponent } from './property/property.component';
+import { BookingComponent } from './booking/booking.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, HostsComponent, LandingComponent, FooterComponent, SnglepageComponent, PropertyComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, HostsComponent, LandingComponent, FooterComponent, SnglepageComponent, PropertyComponent, BookingComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
