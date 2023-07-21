@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* body {
+  background-color: #ffed4a !important;
+} */
+/* src/styles.css */
+@import "~bootstrap/dist/css/bootstrap.min.css";
