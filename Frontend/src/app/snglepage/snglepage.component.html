@@ -64,7 +64,14 @@
     </div>
   </div>
 
-  <button type="button" class="btn btn-danger custon_btn">Book Now</button>
+  <button
+    type="button"
+    class="btn btn-danger custon_btn"
+    data-toggle="modal"
+    data-target="#myModal"
+  >
+    Book Now
+  </button>
 </div>
 <hr />
 <div class="container">
@@ -78,4 +85,52 @@
 </div>
 
 <app-footer></app-footer>
-<!-- --------------------s -->
+<div class="container mt-5">
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-family: 'Cursive', cursive">
+            Book Your Plan 🎉
+          </h4>
+          <button
+            type="button"
+            class="close btn btn-danger"
+            data-dismiss="modal"
+          >
+            &times;
+          </button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h3>Do you really want to Book ?</h3>
+          <p style="font-family: 'Cursive', cursive; font-size: 18px">
+            {{ dataItem.name }} [{{ dataItem.location }}]
+          </p>
+          <div class="col-md-12">
+            <img
+              [src]="dataItem.homeMainPic"
+              class="img-fluid"
+              alt="Small Image 1"
+            />
+            <div class="modal-footer">
+              <p>$ {{ dataItem.price }}</p>
+              <p>⭐{{ dataItem.stars }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            No
+          </button>
+          <button routerLink="/guests" type="button" class="btn btn-success">
+            Yes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
