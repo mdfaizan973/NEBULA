@@ -12,3 +12,8 @@
 #date_type div {
   width: 50%;
 }
+@media screen and (min-width: 100px) and (max-width: 450px) {
+  .container {
+    width: 100%;
+  }
+}

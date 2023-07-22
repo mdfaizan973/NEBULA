@@ -8,6 +8,7 @@
 #main_container div {
   width: 50%;
 }
+
 .img_continer {
   text-align: center;
   border-radius: 15px;
@@ -110,3 +111,10 @@
 }
 
 /* ------------------Footer--------------------- */
+
+@media screen and (min-width: 100px) and (max-width: 450px) {
+  #main_container {
+    display: flex;
+    flex-direction: column;
+  }
+}
