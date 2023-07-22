@@ -24,10 +24,46 @@
   style="min-height: 300px"
 >
   <span class="visually-hidden"> </span>
-  <img
+  <!-- <img
     src="https://echallan.tspolice.gov.in/publicview/images/demo_wait.gif"
     alt=""
-  />
+  /> -->
+  <div class="container custom_cont">
+    <div class="row">
+      <div class="col-md-8">
+        <!-- Skeleton for Big Image -->
+        <div class="skeleton-line" style="height: 300px"></div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Skeleton for Small Image 1 -->
+            <div class="skeleton-line" style="height: 150px"></div>
+          </div>
+          <div class="col-md-12">
+            <!-- Skeleton for Small Image 2 -->
+            <div class="skeleton-line" style="height: 150px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Skeleton for Name -->
+        <div class="skeleton-line" style="width: 70%; height: 16px"></div>
+        <!-- Skeleton for Location -->
+        <div class="skeleton-line" style="width: 50%; height: 16px"></div>
+        <!-- Skeleton for Price -->
+        <div class="skeleton-line" style="width: 30%; height: 16px"></div>
+        <!-- Skeleton for Stars -->
+        <div class="skeleton-line" style="width: 40%; height: 16px"></div>
+        <!-- Skeleton for Description -->
+        <div class="skeleton-line" style="height: 200px"></div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-light p=2"></button>
+  </div>
 </div>
 <!-- ------------- -->
 <ng-template #content>
@@ -166,3 +202,5 @@
     </div>
   </div>
 </div>
+
+<!-- ------------------------------------------------- -->
