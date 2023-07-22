@@ -66,3 +66,13 @@
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 3px;
   margin-top: 95px;
 }
+#icon {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#icons {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}

@@ -15,7 +15,7 @@
   integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
   crossorigin="anonymous"
 ></script>
-
+<!-- 
 <nav
   class="navbar navbar-expand-md cus_navr fixed-top"
   style="background-color: #ffffff"
@@ -48,9 +48,68 @@
         <li class="nav-item cus_icon">
           <a class="nav-link active fs-5" routerLink="/property">Property</a>
         </li>
-        <!-- <li class="nav-item cus_icon">
-          <a class="nav-link active fs-5" href="#">Guest</a>
-        </li> -->
+      </ul>
+      <ul class="navbar-nav sm-icons">
+        <li>
+          <a class="nav-link nav-item fst-normal cus_soc" href="#">
+            <i class="fas fa-heart"></i>
+          </a>
+        </li>
+
+        <li>
+          <a class="nav-link nav-item fst-normal cus_soc" href="#">
+            <i class="fas fa-phone"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link nav-item fst-normal cus_soc" href="#">
+            <i class="fas fa-location-arrow"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link nav-item fst-normal cus_soc" href="#">
+            <i class="fas fa-user"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+<nav
+  class="navbar navbar-expand-md cus_navr fixed-top"
+  style="background-color: #ffffff"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold">
+      <div class="logo-container">
+        <h3 class="logo" routerLink="/">RentEZ</h3>
+      </div>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      data-toggle="modal"
+      data-target=".bd-example-modal-lg"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 cus_main_link">
+        <li class="nav-item cus_icon">
+          <a class="nav-link active fs-5" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item cus_icon">
+          <a class="nav-link active fs-5" routerLink="/hosts">Host</a>
+        </li>
+        <li class="nav-item cus_icon">
+          <a class="nav-link active fs-5" routerLink="/property">Property</a>
+        </li>
       </ul>
       <ul class="navbar-nav sm-icons">
         <li>
@@ -120,6 +179,55 @@
         alt=""
       />
       <p>Chalet</p>
+    </div>
+  </div>
+</div>
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button> -->
+
+<div
+  class="modal fade bd-example-modal-lg"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="logo-container">
+        <h3 class="logo" routerLink="/">RentEZ</h3>
+      </div>
+      <hr />
+      <div id="icons">
+        <h4 routerLink="/home">Home</h4>
+        <h4 routerLink="/hosts">Host</h4>
+        <h4 routerLink="/property">Property</h4>
+      </div>
+      <hr />
+      <div id="icon">
+        <ul class="navbar-nav sm-icons">
+          <li>
+            <a class="nav-link nav-item fst-normal cus_soc" href="#">
+              <i class="fas fa-heart"></i>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-link nav-item fst-normal cus_soc" href="#">
+              <i class="fas fa-phone"></i>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link nav-item fst-normal cus_soc" href="#">
+              <i class="fas fa-location-arrow"></i>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link nav-item fst-normal cus_soc" href="#">
+              <i class="fas fa-user"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

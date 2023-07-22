@@ -111,10 +111,43 @@
 }
 
 /* ------------------Footer--------------------- */
+/* To center the content vertically in smaller screens */
+.banner-container {
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
+/* To add some space between the image and content on larger screens */
+.content-container {
+  padding: 20px;
+}
+.banner-container {
+  padding: 20px;
+}
+
+/* To add space between the cards on larger screens */
+.card {
+  margin-bottom: 20px;
+}
+.card img {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+/* To center the content of the cards on smaller screens */
+@media (max-width: 767px) {
+  .card-body {
+    text-align: center;
+  }
+}
 
 @media screen and (min-width: 100px) and (max-width: 450px) {
   #main_container {
-    display: flex;
-    flex-direction: column;
+    display: none !important;
+  }
+  .banner-container {
+    display: block !important;
+  }
+  #main_container2 {
+    display: none !important;
   }
 }
