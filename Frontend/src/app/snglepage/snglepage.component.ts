@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class SnglepageComponent implements OnInit {
   dataItem: any;
   api = 'https://hotelsapis.onrender.com/placesStore';
+  loading: boolean = false;
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
@@ -21,10 +22,11 @@ export class SnglepageComponent implements OnInit {
   }
 
   fetchDataItem(id: string) {
+    this.loading = true;
     const url = `${this.api}/${id}`;
-
     this.http.get(url).subscribe((response) => {
       this.dataItem = response;
+      this.loading = false;
       console.log(response);
     });
   }

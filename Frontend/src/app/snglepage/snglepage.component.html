@@ -18,72 +18,104 @@
 <!-- Button trigger modal -->
 
 <!-- -------------- -->
-
-<div class="container custom_cont">
-  <div class="row">
-    <div class="col-md-8">
-      <img [src]="dataItem.homeMainPic" class="img-fluid" alt="Big Image" />
-    </div>
-    <div class="col-md-4">
-      <div class="row">
-        <div class="col-md-12">
-          <img
-            [src]="dataItem.carouselPic1"
-            class="img-fluid"
-            alt="Small Image 1"
-          />
-        </div>
-        <p></p>
-        <div class="col-md-12">
-          <img
-            [src]="dataItem.carouselPic2"
-            class="img-fluid"
-            alt="Small Image 2"
-          />
+<div
+  *ngIf="loading; else content"
+  class="d-flex justify-content-center align-items-center"
+  style="min-height: 300px"
+>
+  <span class="visually-hidden"> </span>
+  <img
+    src="https://echallan.tspolice.gov.in/publicview/images/demo_wait.gif"
+    alt=""
+  />
+</div>
+<!-- ------------- -->
+<ng-template #content>
+  <div class="container custom_cont">
+    <div class="row">
+      <div class="col-md-8">
+        <img [src]="dataItem.homeMainPic" class="img-fluid" alt="Big Image" />
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <img
+              [src]="dataItem.carouselPic1"
+              class="img-fluid"
+              alt="Small Image 1"
+            />
+          </div>
+          <p></p>
+          <div class="col-md-12">
+            <img
+              [src]="dataItem.carouselPic2"
+              class="img-fluid"
+              alt="Small Image 2"
+            />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <h1 class="section-heading">{{ dataItem.name }}</h1>
-      <h1 class="section-heading">Place : {{ dataItem.location }}</h1>
-      <h4>$ {{ dataItem.price }}</h4>
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="section-heading">{{ dataItem.name }}</h1>
+        <h1 class="section-heading">Place : {{ dataItem.location }}</h1>
+        <h4>$ {{ dataItem.price }}</h4>
 
-      <h4>{{ dataItem.stars }}⭐</h4>
-      <p class="section-description">
-        Nestled amidst Himalayan foothills and approached via a quiet village
-        road winding down to a private lane, this Getaway by Wanderlust is
-        nestled on the foothills of Mussoorie. The area is a picture-perfect
-        destination with scenic hills, magnificent forests with a rich
-        biodiversity, and walking distance from the confluence of two rivers.
-        Designed in classic contemporary style, The Exotic Villa offers the
-        perfect mix of tropical transparency & modern comfort. Tastefully
-        decorated Bed Rooms, T
-      </p>
+        <h4>{{ dataItem.stars }}⭐</h4>
+        <p class="section-description">
+          Nestled amidst Himalayan foothills and approached via a quiet village
+          road winding down to a private lane, this Getaway by Wanderlust is
+          nestled on the foothills of Mussoorie. The area is a picture-perfect
+          destination with scenic hills, magnificent forests with a rich
+          biodiversity, and walking distance from the confluence of two rivers.
+          Designed in classic contemporary style, The Exotic Villa offers the
+          perfect mix of tropical transparency & modern comfort. Tastefully
+          decorated Bed Rooms, T
+        </p>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="btn btn-danger custon_btn"
+      data-toggle="modal"
+      data-target="#myModal"
+    >
+      Book Now
+    </button>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="image-container">
+      <img
+        [src]="dataItem.carouselPic1"
+        class="img-fluid image"
+        alt="Image 1"
+      />
+      <img
+        [src]="dataItem.carouselPic2"
+        class="img-fluid image"
+        alt="Image 2"
+      />
+      <img
+        [src]="dataItem.carouselPic3"
+        class="img-fluid image"
+        alt="Image 3"
+      />
+      <img
+        [src]="dataItem.carouselPic4"
+        class="img-fluid image"
+        alt="Image 4"
+      />
+      <img
+        [src]="dataItem.carouselPic5"
+        class="img-fluid image"
+        alt="Image 5"
+      />
     </div>
   </div>
-
-  <button
-    type="button"
-    class="btn btn-danger custon_btn"
-    data-toggle="modal"
-    data-target="#myModal"
-  >
-    Book Now
-  </button>
-</div>
-<hr />
-<div class="container">
-  <div class="image-container">
-    <img [src]="dataItem.carouselPic1" class="img-fluid image" alt="Image 1" />
-    <img [src]="dataItem.carouselPic2" class="img-fluid image" alt="Image 2" />
-    <img [src]="dataItem.carouselPic3" class="img-fluid image" alt="Image 3" />
-    <img [src]="dataItem.carouselPic4" class="img-fluid image" alt="Image 4" />
-    <img [src]="dataItem.carouselPic5" class="img-fluid image" alt="Image 5" />
-  </div>
-</div>
-
+</ng-template>
 <app-footer></app-footer>
 <div class="container mt-5">
   <div class="modal fade" id="myModal">
