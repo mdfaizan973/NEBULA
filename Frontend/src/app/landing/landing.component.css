@@ -1,13 +1,17 @@
 #main_container {
   width: 90%;
   height: 80vh;
-  margin: 10px auto;
+  margin: auto;
   align-items: center;
   display: flex;
+}
+img {
+  border-radius: 10px;
 }
 #main_container div {
   width: 50%;
 }
+
 .img_continer {
   text-align: center;
   border-radius: 15px;
@@ -110,3 +114,71 @@
 }
 
 /* ------------------Footer--------------------- */
+/* To center the content vertically in smaller screens */
+.banner-container {
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
+.content-container {
+  padding: 20px;
+}
+.banner-container {
+  padding: 20px;
+}
+.card {
+  margin-bottom: 20px;
+}
+.card img {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.custon_carousal {
+  width: 90%;
+  margin: auto;
+}
+.main_imgs {
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%;
+  height: 80vh !important;
+}
+.main_imgs h3 {
+  color: black !important;
+  font-size: 2.7rem;
+}
+.main_imgs p {
+  color: black !important;
+  font-size: 1.5rem;
+}
+.main_imgs img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+/* To center the content of the cards on smaller screens */
+@media (max-width: 767px) {
+  .card-body {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 450px) {
+  #main_container {
+    display: none !important;
+  }
+  .banner-container {
+    display: block !important;
+  }
+  #main_container2 {
+    display: none !important;
+  }
+  .custon_carousal {
+    height: 100%;
+  }
+  .custon_carousal img {
+    width: 100%;
+  }
+}

@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-
 @Component({
-  selector: 'app-snglepage',
-  templateUrl: './snglepage.component.html',
-  styleUrls: ['./snglepage.component.css'],
+  selector: 'app-hostdetails',
+  templateUrl: './hostdetails.component.html',
+  styleUrls: ['./hostdetails.component.css'],
 })
-export class SnglepageComponent implements OnInit {
+export class HostdetailsComponent implements OnInit {
   dataItem: any;
-  api = 'https://hotelsapis.onrender.com/placesStore';
+  api = 'http://127.0.0.1:5000/hosts';
   loading: boolean = false;
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
@@ -31,3 +30,5 @@ export class SnglepageComponent implements OnInit {
     });
   }
 }
+// HostdetailsComponent
+// api = 'http://127.0.0.1:5000/hosts';

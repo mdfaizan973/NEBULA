@@ -16,8 +16,9 @@
   crossorigin="anonymous"
 ></script>
 <!-- ------------------- -->
+
 <div class="container mt-5">
-  <h2>Guest Profile</h2>
+  <h2>Guest</h2>
   <form>
     <div class="form-group">
       <label for="name">Name:</label>
@@ -93,6 +94,7 @@
 
 <!-- Modal -->
 
+<!-- Add the modal HTML -->
 <div
   class="modal fade"
   id="exampleModalCenter"
@@ -103,8 +105,8 @@
 >
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Your data</h5>
+      <div class="modal-header custom_nav">
+        <h5 class="modal-title" id="exampleModalLongTitle">RentEZ</h5>
         <button
           type="button"
           class="close btn btn-danger"
@@ -115,10 +117,17 @@
         </button>
       </div>
       <div class="modal-body">
-        <p>Name : Faizan</p>
-        <p>Gender : Male</p>
-        <p>Date : 30-07-2023</p>
-        <p>Bio : I am web developer</p>
+        <h4>You have filled your details</h4>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-success"
+          data-dismiss="modal"
+          (click)="redirect()"
+        >
+          OK
+        </button>
       </div>
     </div>
   </div>

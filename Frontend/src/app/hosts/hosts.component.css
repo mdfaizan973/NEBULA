@@ -12,3 +12,62 @@
 #date_type div {
   width: 50%;
 }
+@media screen and (min-width: 100px) and (max-width: 450px) {
+  .container {
+    width: 100%;
+  }
+}
+/* Custom styles for the success modal */
+.modal-content {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 8px;
+}
+
+.modal-header {
+  border-radius: 8px 8px 0 0;
+}
+
+.modal-footer {
+  border-radius: 0 0 8px 8px;
+}
+
+/* Styling the success message text */
+.modal-body p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Background color and text color for success header */
+.modal-header.bg-success {
+  background-color: #28a745;
+}
+
+/* Close button style */
+.close {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Centering the success message */
+.modal-body p.text-center {
+  margin: 0;
+}
+
+/* Button style */
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #5a6268;
+  border-color: #545b62;
+}

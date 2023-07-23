@@ -1,1 +1,138 @@
-<p>booking works!</p>
+<div id="header">
+  <h2>Hi 🎉🎉, you’re logged in</h2>
+  <p>Review your booking details to continue.</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="container">
+        <div class="container">
+          <div class="form-container">
+            <form>
+              <h3>Payment Details</h3>
+              <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cardNumber"
+                  placeholder="Enter card number"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="expiryDate">Expiry Date</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="expiryDate"
+                  placeholder="MM/YY"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cvv"
+                  placeholder="CVV"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-outline-danger custonprimary"
+                data-toggle="modal"
+                data-target="#paymentSuccessModal"
+              >
+                Request to Book
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <img
+                src="https://a0.muscache.com/im/pictures/4f70b681-a792-4530-8c52-f2a8d262942d.jpg?im_w=720"
+                class="card-img-top"
+                alt="Payment Card"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Serene Sea Breeze Villa</h5>
+                <p class="card-text">
+                  Step into a magical realm of towering trees, where dreams come
+                  alive with wonder. Previous ...
+                </p>
+                <div class="d-flex justify-content-between mt-3">
+                  <div class="card small-card">
+                    <img
+                      src="https://a0.muscache.com/im/pictures/6d90bd2d-1bae-47cc-b831-b7561d766048.jpg?im_w=720"
+                      class="card-img-top"
+                      alt="Small Image 2"
+                    />
+                  </div>
+
+                  <div class="card small-card">
+                    <img
+                      src="https://a0.muscache.com/im/pictures/4a5c629b-9c92-450e-8d8f-995875798838.jpg?im_w=720"
+                      class="card-img-top"
+                      alt="Small Image 1"
+                    />
+                  </div>
+
+                  <div class="card small-card">
+                    <img
+                      src="https://a0.muscache.com/im/pictures/81aaba9d-ec2b-4f83-ab67-1f4c6dbccc17.jpg?im_w=720"
+                      class="card-img-top"
+                      alt="Small Image 3"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
+<div
+  class="modal fade"
+  id="paymentSuccessModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="paymentSuccessModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paymentSuccessModalLabel">
+          Payment Successful 🎉🎉
+        </h5>
+      </div>
+      <div class="modal-body">
+        <h4>Your payment has been successfully processed.</h4>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-success"
+          data-dismiss="modal"
+          (click)="redirects()"
+        >
+          OK
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

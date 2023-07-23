@@ -1,20 +1,262 @@
-<!-- Data of hotel  -->
-
-<div id="main_container" *ngIf="products.length > 0">
-  <div class="card" *ngFor="let product of products">
-    <a [routerLink]="['/home', product.id]">
-      <img [src]="product.homeMainPic" alt="Product Image" />
-    </a>
-    <div id="data_info">
-      <div class="stars">
-        <h3 class="title">{{ product.name }}</h3>
-        <p>⭐ {{ product.stars }}</p>
-      </div>
-      <h4 class="title">{{ product.location.toUpperCase() }}</h4>
-      <p class="price">$ {{ product.price }}</p>
-    </div>
+<div class="custon_filter">
+  <div class="btn-group customfilter" role="group" aria-label="Filter Options">
+    <button
+      type="button"
+      class="btn btn-outline-primary"
+      (click)="londonfilter()"
+    >
+      <i class="fas fa-flag"></i> LON
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-primary"
+      (click)="russiafilter()"
+    >
+      <i class="fas fa-flag"></i> Russia
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-primary"
+      (click)="australiafilter()"
+    >
+      <i class="fas fa-flag"></i> AUS
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-primary"
+      (click)="newyorkfilter()"
+    >
+      <i class="fas fa-flag"></i> N-Y
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-primary"
+      (click)="usausfilter()"
+    >
+      <i class="fas fa-flag"></i> USA
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-primary"
+      (click)="indiafilter()"
+    >
+      <i class="fas fa-flag"></i> India
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-primary"
+      (click)="francefilter()"
+    >
+      <i class="fas fa-flag"></i> France
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-primary"
+      (click)="spainfilter()"
+    >
+      <i class="fas fa-flag"></i> Spain
+    </button>
+  </div>
+  <div class="btn-group customfilter2" role="group" aria-label="Filter Options">
+    <button
+      type="button"
+      class="btn btn-outline-success"
+      (click)="low_to_high()"
+    >
+      <i class="fas fa-arrow-up"></i> - <i class="fas fa-rupee-sign"></i> Low To
+      High
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-success"
+      (click)="high_to_low()"
+    >
+      <i class="fas fa-arrow-down"></i> - <i class="fas fa-rupee-sign"></i> High
+      To Low
+    </button>
   </div>
 </div>
+
+<!-- --------------------------------------------------------------- -->
+<div
+  *ngIf="loading; else content"
+  class="d-flex justify-content-center align-items-center"
+  style="min-height: 300px"
+>
+  <span class="visually-hidden"> </span>
+  <div id="main_container">
+    <div class="col-md-4">
+      <div class="card skeleton">
+        <a>
+          <!-- Skeleton for Image -->
+          <div class="skeleton-line" style="height: 200px"></div>
+        </a>
+        <div id="data_info">
+          <!-- Skeleton for Title -->
+          <div class="skeleton-line" style="width: 70%; height: 16px"></div>
+          <!-- Skeleton for Stars and Rating -->
+          <div class="skeleton-line" style="width: 40%; height: 12px"></div>
+          <!-- Skeleton for Location -->
+          <div class="skeleton-line" style="width: 50%; height: 12px"></div>
+          <!-- Skeleton for Price -->
+          <div class="skeleton-line" style="width: 30%; height: 12px"></div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------ -->
+    <div class="col-md-4">
+      <div class="card skeleton">
+        <a>
+          <!-- Skeleton for Image -->
+          <div class="skeleton-line" style="height: 200px"></div>
+        </a>
+        <div id="data_info">
+          <!-- Skeleton for Title -->
+          <div class="skeleton-line" style="width: 70%; height: 16px"></div>
+          <!-- Skeleton for Stars and Rating -->
+          <div class="skeleton-line" style="width: 40%; height: 12px"></div>
+          <!-- Skeleton for Location -->
+          <div class="skeleton-line" style="width: 50%; height: 12px"></div>
+          <!-- Skeleton for Price -->
+          <div class="skeleton-line" style="width: 30%; height: 12px"></div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------ -->
+    <div class="col-md-4">
+      <div class="card skeleton">
+        <a>
+          <!-- Skeleton for Image -->
+          <div class="skeleton-line" style="height: 200px"></div>
+        </a>
+        <div id="data_info">
+          <!-- Skeleton for Title -->
+          <div class="skeleton-line" style="width: 70%; height: 16px"></div>
+          <!-- Skeleton for Stars and Rating -->
+          <div class="skeleton-line" style="width: 40%; height: 12px"></div>
+          <!-- Skeleton for Location -->
+          <div class="skeleton-line" style="width: 50%; height: 12px"></div>
+          <!-- Skeleton for Price -->
+          <div class="skeleton-line" style="width: 30%; height: 12px"></div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------ -->
+    <div class="col-md-4">
+      <div class="card skeleton">
+        <a>
+          <!-- Skeleton for Image -->
+          <div class="skeleton-line" style="height: 200px"></div>
+        </a>
+        <div id="data_info">
+          <!-- Skeleton for Title -->
+          <div class="skeleton-line" style="width: 70%; height: 16px"></div>
+          <!-- Skeleton for Stars and Rating -->
+          <div class="skeleton-line" style="width: 40%; height: 12px"></div>
+          <!-- Skeleton for Location -->
+          <div class="skeleton-line" style="width: 50%; height: 12px"></div>
+          <!-- Skeleton for Price -->
+          <div class="skeleton-line" style="width: 30%; height: 12px"></div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------ -->
+    <div class="col-md-4">
+      <div class="card skeleton">
+        <a>
+          <!-- Skeleton for Image -->
+          <div class="skeleton-line" style="height: 200px"></div>
+        </a>
+        <div id="data_info">
+          <!-- Skeleton for Title -->
+          <div class="skeleton-line" style="width: 70%; height: 16px"></div>
+          <!-- Skeleton for Stars and Rating -->
+          <div class="skeleton-line" style="width: 40%; height: 12px"></div>
+          <!-- Skeleton for Location -->
+          <div class="skeleton-line" style="width: 50%; height: 12px"></div>
+          <!-- Skeleton for Price -->
+          <div class="skeleton-line" style="width: 30%; height: 12px"></div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------ -->
+    <div class="col-md-4">
+      <div class="card skeleton">
+        <a>
+          <!-- Skeleton for Image -->
+          <div class="skeleton-line" style="height: 200px"></div>
+        </a>
+        <div id="data_info">
+          <!-- Skeleton for Title -->
+          <div class="skeleton-line" style="width: 70%; height: 16px"></div>
+          <!-- Skeleton for Stars and Rating -->
+          <div class="skeleton-line" style="width: 40%; height: 12px"></div>
+          <!-- Skeleton for Location -->
+          <div class="skeleton-line" style="width: 50%; height: 12px"></div>
+          <!-- Skeleton for Price -->
+          <div class="skeleton-line" style="width: 30%; height: 12px"></div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------ -->
+    <div class="col-md-4">
+      <div class="card skeleton">
+        <a>
+          <!-- Skeleton for Image -->
+          <div class="skeleton-line" style="height: 200px"></div>
+        </a>
+        <div id="data_info">
+          <!-- Skeleton for Title -->
+          <div class="skeleton-line" style="width: 70%; height: 16px"></div>
+          <!-- Skeleton for Stars and Rating -->
+          <div class="skeleton-line" style="width: 40%; height: 12px"></div>
+          <!-- Skeleton for Location -->
+          <div class="skeleton-line" style="width: 50%; height: 12px"></div>
+          <!-- Skeleton for Price -->
+          <div class="skeleton-line" style="width: 30%; height: 12px"></div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------ -->
+    <div class="col-md-4">
+      <div class="card skeleton">
+        <a>
+          <!-- Skeleton for Image -->
+          <div class="skeleton-line" style="height: 200px"></div>
+        </a>
+        <div id="data_info">
+          <!-- Skeleton for Title -->
+          <div class="skeleton-line" style="width: 70%; height: 16px"></div>
+          <!-- Skeleton for Stars and Rating -->
+          <div class="skeleton-line" style="width: 40%; height: 12px"></div>
+          <!-- Skeleton for Location -->
+          <div class="skeleton-line" style="width: 50%; height: 12px"></div>
+          <!-- Skeleton for Price -->
+          <div class="skeleton-line" style="width: 30%; height: 12px"></div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------ -->
+  </div>
+</div>
+<!-- --------------------------------------------------------------- -->
+<ng-template #content>
+  <div id="main_container" *ngIf="products.length > 0">
+    <div class="card" *ngFor="let product of products">
+      <a [routerLink]="['/home', product.id]">
+        <img [src]="product.homeMainPic" alt="Product Image" />
+      </a>
+      <div id="data_info">
+        <div class="stars">
+          <h3 class="title">{{ product.name }}</h3>
+          <p>⭐ {{ product.stars }}</p>
+        </div>
+        <h4 class="title">{{ product.location.toUpperCase() }}</h4>
+        <p class="price">$ {{ product.price }}</p>
+      </div>
+    </div>
+  </div>
+</ng-template>
 
 <div id="pagination_btn">
   <button type="button" (click)="prev()" class="btn btn-secondary">Prev</button>

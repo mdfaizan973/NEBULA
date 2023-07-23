@@ -18,64 +18,185 @@
 <!-- Button trigger modal -->
 
 <!-- -------------- -->
+<div
+  *ngIf="loading; else content"
+  class="d-flex justify-content-center align-items-center"
+  style="min-height: 300px"
+>
+  <span class="visually-hidden"> </span>
 
-<div class="container custom_cont">
-  <div class="row">
-    <div class="col-md-8">
-      <img [src]="dataItem.homeMainPic" class="img-fluid" alt="Big Image" />
-    </div>
-    <div class="col-md-4">
-      <div class="row">
-        <div class="col-md-12">
-          <img
-            [src]="dataItem.carouselPic1"
-            class="img-fluid"
-            alt="Small Image 1"
-          />
+  <div class="container custom_cont">
+    <div class="row">
+      <div class="col-md-8">
+        <!-- Skeleton for Big Image -->
+        <div class="skeleton-line" style="height: 300px"></div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Skeleton for Small Image 1 -->
+            <div class="skeleton-line" style="height: 150px"></div>
+          </div>
+          <div class="col-md-12">
+            <!-- Skeleton for Small Image 2 -->
+            <div class="skeleton-line" style="height: 150px"></div>
+          </div>
         </div>
-        <p></p>
-        <div class="col-md-12">
-          <img
-            [src]="dataItem.carouselPic2"
-            class="img-fluid"
-            alt="Small Image 2"
-          />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Skeleton for Name -->
+        <div class="skeleton-line" style="width: 70%; height: 16px"></div>
+        <!-- Skeleton for Location -->
+        <div class="skeleton-line" style="width: 50%; height: 16px"></div>
+        <!-- Skeleton for Price -->
+        <div class="skeleton-line" style="width: 30%; height: 16px"></div>
+        <!-- Skeleton for Stars -->
+        <div class="skeleton-line" style="width: 40%; height: 16px"></div>
+        <!-- Skeleton for Description -->
+        <div class="skeleton-line" style="height: 200px"></div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-light p=2"></button>
+  </div>
+</div>
+<!-- ------------- -->
+<ng-template #content>
+  <div class="container custom_cont">
+    <div class="row">
+      <div class="col-md-8">
+        <img [src]="dataItem.homeMainPic" class="img-fluid" alt="Big Image" />
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <img
+              [src]="dataItem.carouselPic1"
+              class="img-fluid"
+              alt="Small Image 1"
+            />
+          </div>
+          <p></p>
+          <div class="col-md-12">
+            <img
+              [src]="dataItem.carouselPic2"
+              class="img-fluid"
+              alt="Small Image 2"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="section-heading">{{ dataItem.name }}</h1>
+        <h1 class="section-heading">Place : {{ dataItem.location }}</h1>
+        <h4>$ {{ dataItem.price }}</h4>
+
+        <h4>{{ dataItem.stars }}⭐</h4>
+        <p class="section-description">
+          Nestled amidst Himalayan foothills and approached via a quiet village
+          road winding down to a private lane, this Getaway by Wanderlust is
+          nestled on the foothills of Mussoorie. The area is a picture-perfect
+          destination with scenic hills, magnificent forests with a rich
+          biodiversity, and walking distance from the confluence of two rivers.
+          Designed in classic contemporary style, The Exotic Villa offers the
+          perfect mix of tropical transparency & modern comfort. Tastefully
+          decorated Bed Rooms, T
+        </p>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="btn btn-danger custon_btn"
+      data-toggle="modal"
+      data-target="#myModal"
+    >
+      Book Now
+    </button>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="image-container">
+      <img
+        [src]="dataItem.carouselPic1"
+        class="img-fluid image"
+        alt="Image 1"
+      />
+      <img
+        [src]="dataItem.carouselPic2"
+        class="img-fluid image"
+        alt="Image 2"
+      />
+      <img
+        [src]="dataItem.carouselPic3"
+        class="img-fluid image"
+        alt="Image 3"
+      />
+      <img
+        [src]="dataItem.carouselPic4"
+        class="img-fluid image"
+        alt="Image 4"
+      />
+      <img
+        [src]="dataItem.carouselPic5"
+        class="img-fluid image"
+        alt="Image 5"
+      />
+    </div>
+  </div>
+</ng-template>
+<app-footer></app-footer>
+<div class="container mt-5">
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-family: 'Cursive', cursive">
+            Book Your Plan 🎉
+          </h4>
+          <button
+            type="button"
+            class="close btn btn-danger"
+            data-dismiss="modal"
+          >
+            &times;
+          </button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h3>Do you really want to Book ?</h3>
+          <p style="font-family: 'Cursive', cursive; font-size: 18px">
+            {{ dataItem.name }} [{{ dataItem.location }}]
+          </p>
+          <div class="col-md-12">
+            <img
+              [src]="dataItem.homeMainPic"
+              class="img-fluid"
+              alt="Small Image 1"
+            />
+            <div class="modal-footer">
+              <p>$ {{ dataItem.price }}</p>
+              <p>⭐{{ dataItem.stars }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            No
+          </button>
+          <button routerLink="/guests" type="button" class="btn btn-success">
+            Yes
+          </button>
         </div>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-12">
-      <h1 class="section-heading">{{ dataItem.name }}</h1>
-      <h1 class="section-heading">Place : {{ dataItem.location }}</h1>
-      <h4>$ {{ dataItem.price }}</h4>
-
-      <h4>{{ dataItem.stars }}⭐</h4>
-      <p class="section-description">
-        Nestled amidst Himalayan foothills and approached via a quiet village
-        road winding down to a private lane, this Getaway by Wanderlust is
-        nestled on the foothills of Mussoorie. The area is a picture-perfect
-        destination with scenic hills, magnificent forests with a rich
-        biodiversity, and walking distance from the confluence of two rivers.
-        Designed in classic contemporary style, The Exotic Villa offers the
-        perfect mix of tropical transparency & modern comfort. Tastefully
-        decorated Bed Rooms, T
-      </p>
-    </div>
-  </div>
-
-  <button type="button" class="btn btn-danger custon_btn">Book Now</button>
 </div>
-<hr />
-<div class="container">
-  <div class="image-container">
-    <img [src]="dataItem.carouselPic1" class="img-fluid image" alt="Image 1" />
-    <img [src]="dataItem.carouselPic2" class="img-fluid image" alt="Image 2" />
-    <img [src]="dataItem.carouselPic3" class="img-fluid image" alt="Image 3" />
-    <img [src]="dataItem.carouselPic4" class="img-fluid image" alt="Image 4" />
-    <img [src]="dataItem.carouselPic5" class="img-fluid image" alt="Image 5" />
-  </div>
-</div>
-
-<app-footer></app-footer>
-<!-- --------------------s -->
+<!-- ------------------------------------------------- -->
