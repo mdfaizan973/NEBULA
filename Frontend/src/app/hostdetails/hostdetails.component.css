@@ -1,0 +1,61 @@
+/* host-card.component.css */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 25%;
+  margin: auto;
+}
+
+.card-header {
+  padding: 10px;
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 15px;
+  position: relative;
+}
+
+.skeleton-image {
+  background-color: #f0f0f0;
+  height: 50px; /* Set the desired height for the image */
+  width: 50%; /* Set the desired width for the image */
+  border-radius: 100%;
+}
+
+.skeleton-placeholder {
+  background-color: #f0f0f0;
+  height: 16px; /* Set the desired height for the placeholders */
+  width: 80%; /* Set the desired width for the placeholders */
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+/* Animation to give a loading effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton-placeholder::after,
+.skeleton-image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 1s infinite;
+}

@@ -37,12 +37,16 @@
       <ng-template #dataRows>
         <tr *ngFor="let prop of property">
           <td>{{ prop.name.toUpperCase() }}</td>
-          <td>{{ prop.location }}</td>
+          <td>{{ prop.location.toUpperCase() }}</td>
           <td>{{ prop.hostingTime }}</td>
           <td>{{ prop.propertyType }}</td>
           <td class="prop_status">{{ prop.status }}</td>
           <td>
-            <button type="button" class="btn btn-success">
+            <button
+              type="button"
+              class="btn btn-success"
+              [routerLink]="['/hosts', prop.id]"
+            >
               <i class="fas fa-eye"></i>
             </button>
           </td>

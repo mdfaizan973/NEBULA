@@ -7,10 +7,12 @@ import { SnglepageComponent } from './snglepage/snglepage.component';
 import { PropertyComponent } from './property/property.component';
 import { GuestComponent } from './guest/guest.component';
 import { BookingComponent } from './booking/booking.component';
+import { HostdetailsComponent } from './hostdetails/hostdetails.component';
 const routes: Routes = [
   { path: '', component: LandingComponent },
   { path: 'home', component: HomeComponent },
   { path: 'hosts', component: HostsComponent },
+  { path: 'hosts/:id', component: HostdetailsComponent },
   { path: 'property', component: PropertyComponent },
   { path: 'booking', component: BookingComponent },
   { path: 'guests', component: GuestComponent },

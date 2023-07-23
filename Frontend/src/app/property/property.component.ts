@@ -45,16 +45,12 @@ export class PropertyComponent {
   // }
 
   deleteitem(id: number) {
-    // const url = `http://127.0.0.1:5000/hosts/delete-host/${id}`; // Replace 'data' with your endpoint
-    // return this.http.delete(url);
-    // Find the index of the item to be deleted
     const index = this.property.findIndex((item) => item.id === id);
     if (index !== -1) {
       // Remove the item from the property array
       this.property.splice(index, 1);
 
-      // Send HTTP DELETE request to the API to delete data from the server
-      const apiUrl = `http://127.0.0.1:5000/delete-host/${id}`; // Replace 'hosts' with the actual endpoint
+      const apiUrl = `http://127.0.0.1:5000/delete-host/${id}`;
       this.http.delete(apiUrl).subscribe(
         () => {
           console.log('Data deleted successfully.');
