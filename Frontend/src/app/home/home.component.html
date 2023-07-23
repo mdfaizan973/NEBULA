@@ -1,4 +1,46 @@
-<!-- Data of hotel  -->
+<div class="custon_filter">
+  <div class="btn-group customfilter" role="group" aria-label="Filter Options">
+    <button type="button" class="btn btn-outline-primary">
+      <i class="fas fa-flag"></i> LON
+    </button>
+    <button type="button" class="btn btn-outline-primary">
+      <i class="fas fa-flag"></i> Russia
+    </button>
+    <button type="button" class="btn btn-outline-primary">
+      <i class="fas fa-flag"></i> AUS
+    </button>
+    <button type="button" class="btn btn-outline-primary">
+      <i class="fas fa-flag"></i> N-Y
+    </button>
+    <button type="button" class="btn btn-outline-primary">
+      <i class="fas fa-flag"></i> USA
+    </button>
+    <button type="button" class="btn btn-outline-primary">
+      <i class="fas fa-flag"></i> India
+    </button>
+    <button type="button" class="btn btn-outline-primary">
+      <i class="fas fa-flag"></i> France
+    </button>
+    <button type="button" class="btn btn-outline-primary">
+      <i class="fas fa-flag"></i> Spain
+    </button>
+  </div>
+  <div class="btn-group customfilter2" role="group" aria-label="Filter Options">
+    <button type="button" class="btn btn-outline-success">
+      <i class="fas fa-arrow-up"></i> - <i class="fas fa-rupee-sign"></i> Low To
+      High
+    </button>
+    <button type="button" class="btn btn-outline-success">
+      <i class="fas fa-arrow-down"></i> - <i class="fas fa-rupee-sign"></i> High
+      To Low
+    </button>
+  </div>
+</div>
+
+<!-- (click)="onFilterChange('option1')"
+(click)="onFilterChange('option2')"
+(click)="onFilterChange('option3')" -->
+
 <!-- --------------------------------------------------------------- -->
 <div
   *ngIf="loading; else content"

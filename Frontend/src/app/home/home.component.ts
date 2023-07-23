@@ -8,7 +8,6 @@ import { HttpClient } from '@angular/common/http'; //-----
 export class HomeComponent {
   page = 1;
   loading: boolean = false;
-
   next() {
     this.loading = true;
     this.page++;
@@ -38,6 +37,7 @@ export class HomeComponent {
     }
   }
 
+  // ----
   products: any[] = [];
 
   constructor(private http: HttpClient) {}
@@ -59,4 +59,6 @@ export class HomeComponent {
         }
       );
   }
+
+  // -----------
 }

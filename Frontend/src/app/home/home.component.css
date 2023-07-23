@@ -66,7 +66,22 @@
   margin-bottom: 10px;
   border-radius: 4px;
 }
+.custon_filter {
+  width: 90%;
+  margin: auto;
+  display: flex;
+}
 
+.customfilter {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+.customfilter2 {
+  width: 40%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 @media screen and (min-width: 100px) and (max-width: 450px) {
   #main_container {
     display: grid;
@@ -74,5 +89,19 @@
   }
   .card {
     width: 100%;
+  }
+  .customfilter {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .custon_filter {
+    display: flex;
+    flex-direction: column;
+  }
+  .customfilter2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
