@@ -81,6 +81,10 @@ def get_hosts():
         hosts.append(host)
     return jsonify(hosts)
     
+#---------------------------single DATA--------------------------------------
+    
+
+
 #---------------------------DELETE DATA--------------------------------------
 
 @app.route("/delete-host/<host_id>", methods=["DELETE"])
@@ -112,6 +116,14 @@ def delete_host(host_id):
 #         return jsonify({"message": "Host updated successfully"})
 #     else:
 #         return jsonify({"error": "Host not found"}), 404
+
+#---------------------------------********--------------------------------
+
+#---------------------------------guest data--------------------------------
+
+
+
+
 
 #---------------------------------********--------------------------------
 if __name__ == "__main__":
