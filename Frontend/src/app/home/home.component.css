@@ -82,6 +82,44 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+/* ----------------------- */
+.table-container {
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+/* Add a box-shadow to give a subtle visual effect */
+.table-container {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table-striped tbody tr:not(:last-child) {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.05
+  ); /* Light gray background for striped rows */
+}
+
+.table-striped tbody tr:last-child {
+  background-color: transparent; /* Transparent background for the last row */
+}
+
+/* Custom CSS for the skeleton loading effect */
+.skeleton-row {
+  background-color: #f1f1f1; /* Light gray background for the skeleton row */
+}
+
+/* Animation for the skeleton loading effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
 @media screen and (min-width: 100px) and (max-width: 450px) {
   #main_container {
     display: grid;

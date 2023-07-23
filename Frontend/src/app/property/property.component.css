@@ -1,0 +1,68 @@
+/* Custom CSS for the table */
+.table-container {
+  margin: 30px auto;
+  width: 80%;
+  border-radius: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table thead th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: #333;
+  border-top: 2px solid #dee2e6;
+}
+
+.table tbody tr:hover {
+  background-color: #f0f0f0;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+/* Custom CSS for the table */
+.table-container {
+  margin: 30px auto;
+  max-width: 100%;
+  overflow-x: auto; /* Add horizontal scroll for small screens */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table thead th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: #333;
+  border-top: 2px solid #dee2e6;
+}
+
+.table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+#pagination_btn {
+  display: flex;
+  width: 12%;
+  justify-content: space-around;
+  margin: auto;
+}
