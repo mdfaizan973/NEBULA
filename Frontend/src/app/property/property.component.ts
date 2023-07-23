@@ -14,7 +14,7 @@ export class PropertyComponent {
 
   ngOnInit() {
     this.loading = true;
-    this.http.get<any[]>('http://127.0.0.1:5000/hosts').subscribe(
+    this.http.get<any[]>(`http://127.0.0.1:5000/hosts`).subscribe(
       (response) => {
         this.property = response;
         // console.log(response);
@@ -34,4 +34,37 @@ export class PropertyComponent {
       this.page--;
     }
   }
+
+  // deleteitem(id: number) {
+  //   const index = this.property.findIndex((item) => item.id === id);
+  //   if (index !== -1) {
+  //     // Remove the item from the dataItems array
+  //     this.property.splice(index, 1);
+  //     console.log('Data deleted successfully.');
+  //   }
+  // }
+
+  deleteitem(id: number) {
+    // const url = `http://127.0.0.1:5000/hosts/delete-host/${id}`; // Replace 'data' with your endpoint
+    // return this.http.delete(url);
+    // Find the index of the item to be deleted
+    const index = this.property.findIndex((item) => item.id === id);
+    if (index !== -1) {
+      // Remove the item from the property array
+      this.property.splice(index, 1);
+
+      // Send HTTP DELETE request to the API to delete data from the server
+      const apiUrl = `http://127.0.0.1:5000/delete-host/${id}`; // Replace 'hosts' with the actual endpoint
+      this.http.delete(apiUrl).subscribe(
+        () => {
+          console.log('Data deleted successfully.');
+        },
+        (error) => {
+          console.error('Error deleting data:', error);
+          // Handle error scenarios if needed.
+        }
+      );
+    }
+  }
+  // deleteing-----------------------------------/delete-host/<host_id>
 }
