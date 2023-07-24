@@ -59,6 +59,26 @@ DataBase
  <img width="45%" src="https://github.com/mdfaizan973/NEBULA/assets/106812942/7dab7e3c-0d93-49ff-a991-dd2720cd5670" />
 </div>
 
+# Payment
+<div display="flex" >
+<img width="45%" src="https://github.com/mdfaizan973/NEBULA/assets/106812942/09ec8b76-e782-4b41-b0ca-2ea4e65e78d3" />
+ <img width="45%" src="https://github.com/mdfaizan973/NEBULA/assets/106812942/f8552915-6b5c-4375-90f2-18b766ff535c" />
+</div>
+
+
+# Guest
+<div display="flex" >
+<img width="45%" src="https://github.com/mdfaizan973/NEBULA/assets/106812942/7b70892f-e266-4087-b6c1-5c852fd2c02c" />
+ <img width="45%" src="https://github.com/mdfaizan973/NEBULA/assets/106812942/5033e50c-0138-4ef8-8244-26977c0e4007" />
+</div>
+
+
+# Footer
+<div display="flex" >
+<img width="45%" src="https://github.com/mdfaizan973/NEBULA/assets/106812942/a1520f0f-7153-4024-a960-ebecec478723" />
+ <img width="45%" src="https://github.com/mdfaizan973/NEBULA/assets/106812942/31787549-d57f-42a0-afd3-31c478037d41" />
+</div>
+
 
 
 
